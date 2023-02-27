@@ -5,13 +5,13 @@ An easy way to move from the [Admonition plug-in](https://github.com/valentine19
 This is an GAWK script that make the most basic move of tranforming
 
 ```md
-`` ` ```` ` ```` ` ``ad-check
+```ad-check
 A check on one line
 
 and on some other lines as well
 ending with an extra space
 
-`` ` ```` ` ```` ` ``
+` ``
 ```
 
 into 
@@ -27,7 +27,7 @@ into
 
 ## Usage
 
-```
+```bash
 OIFS="$IFS"
 IFS=$'\n'
 for FILE in `find {YOU_OBSIDIAN_VAULT_DIR} -name '*.md'`; do gawk -i inplace -f admonition-to-callout.awk $FILE; done
