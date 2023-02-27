@@ -28,6 +28,7 @@ match($0, /```ad-(.*)/, ary) {
 }
 
 {
-    if (in_admonition == 1) print "> " $0
+    if (in_admonition == 1 && $0 != "") print "> " $0
+    else if(in_admonition == 1) print ">"$0
     else print $0
 }
