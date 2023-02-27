@@ -1,4 +1,4 @@
-# An example MD fil
+# An example MD file
 
 ```ad-tip
 
